@@ -1,3 +1,5 @@
+// ✅ ทั้งหมดนี้ = Server เท่านั้น
+
 import NextAuth from "next-auth";
 import Logto from "next-auth/providers/logto";
 
