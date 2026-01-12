@@ -9,9 +9,11 @@ export default async function Home() {
 
   return (
     <div>
-      <SignIn/>
-      <SignOutBTN/>
-      <br/>
+      <section className="p-2">
+        <SignIn/>
+        <SignOutBTN />
+      </section>
+      <br />
       {session?.user ? (
         <>Welcome {session.user.email}</>
       ) : (

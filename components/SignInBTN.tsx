@@ -1,10 +1,12 @@
 "use client";
 
-import { signIn } from "next-auth/react"; // ✅ ตัวนี้เท่านั้น
+import { signIn } from "next-auth/react"; 
 
 export default function SignInBTN() {
     return (
-        <button onClick={() => signIn("logto")}>
+        <button
+            className="px-4 p-2 bg-red-300 rounded-2xl hover:scale-105 shadow-md"
+            onClick={() => signIn("logto")}>
             Sign In with Logto
         </button>
     );
