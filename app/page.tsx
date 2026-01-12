@@ -8,16 +8,21 @@ export default async function Home() {
   const session = await auth();
 
   return (
-    <div>
-      <section className="p-2">
-        <SignIn/>
-        <SignOutBTN />
+    <div className="p-10">
+      <section>
+        {session?.user ? (
+          <SignOutBTN />
+        ) : (
+          <SignIn />
+        )}
       </section>
+
       <br />
+      
       {session?.user ? (
         <>Welcome {session.user.email}</>
       ) : (
-        <>Not signed in</>
+        <>Please signed in</>
       )}
     </div>
   );
